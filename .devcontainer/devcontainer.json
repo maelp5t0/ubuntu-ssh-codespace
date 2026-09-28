@@ -1,0 +1,23 @@
+{
+  "name": "ubuntu-ssh-codespace",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "bash .devcontainer/setup-sshd.sh",
+  "forwardPorts": [2222],
+  "portsAttributes": {
+    "2222": {
+      "label": "SSH",
+      "onAutoForward": "notify",
+      "protocol": "tcp"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  }
+}
