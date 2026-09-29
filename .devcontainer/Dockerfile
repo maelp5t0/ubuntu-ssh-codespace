@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/devcontainers/base:ubuntu
+FROM exegol/exegol:latest
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     openssh-server \
